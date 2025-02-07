@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahammad Afnan M - Portfolio</title>
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #2563eb;
+            --text-color: #1f2937;
+            --bg-color: #ffffff;
+            --section-bg: #f3f4f6;
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background: var(--bg-color);
+        }
+
+        /* Header styles */
+        header {
+            background: var(--primary-color);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+
+        .profile-info h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .profile-info p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .contact-links {
+            margin-top: 1rem;
+        }
+
+        .contact-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 0.5rem;
+            padding: 0.5rem 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 4px;
+            display: inline-block;
+            transition: var(--transition);
+        }
+
+        .contact-links a:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        /* Section styles */
+        section {
+            padding: 4rem 2rem;
+        }
+
+        section:nth-child(even) {
+            background: var(--section-bg);
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            color: var(--primary-color);
+        }
+
+        /* Education styles */
+        .education-item {
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            padding: 1rem;
+            border-left: 4px solid var(--primary-color);
+            background: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .education-item h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Projects styles */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .project-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .project-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        /* Skills styles */
+        .skills-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .skills-category {
+            margin-bottom: 2rem;
+        }
+
+        .skills-category h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .skill-tag {
+            background: var(--primary-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        /* Achievements styles */
+        .achievements-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .achievement-item {
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            header {
+                padding: 1.5rem 1rem;
+            }
+
+            .profile-info h1 {
+                font-size: 2rem;
+            }
+
+            section {
+                padding: 2rem 1rem;
+            }
+
+            .contact-links a {
+                display: block;
+                margin: 0.5rem 0;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="profile-info">
+            <h1>Mahammad Afnan M</h1>
+            <p>MCA, BCA Graduate | Web Developer</p>
+            <div class="contact-links">
+                <a href="mailto:mahammad.afnan.m@gmail.com">Email</a>
+                <a href="https://linkedin.com/mahammad-afnan-m" target="_blank">LinkedIn</a>
+                <a href="https://github.com/afnan011" target="_blank">GitHub</a>
+                <a href="https://leetcode.com/afnan011" target="_blank">LeetCode</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="education">
+        <h2 class="section-title">Education</h2>
+        <div class="education-item">
+            <h3>Master of Computer Applications [MCA]</h3>
+            <p>Vivekananda College of Engineering & Technology, Puttur</p>
+            <p>CGPA: 9.43 | September 2024</p>
+        </div>
+        <div class="education-item">
+            <h3>Bachelor of Computer Applications [BCA]</h3>
+            <p>St Philomena College Darbe, Puttur</p>
+            <p>CGPA: 9.60 | January 2023</p>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2 class="section-title">Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3>Aantarya 2k24</h3>
+                <p>National Level Inter College IT Fest Website</p>
+                <p>Led a team of 3 in developing a website that increased event registration by 30%.</p>
+                <p>Tech: HTML, CSS, JavaScript, Node.js, Express, MongoDB</p>
+            </div>
+            <div class="project-card">
+                <h3>SmartStockInsight</h3>
+                <p>Web Application for Predicting Stock Prices</p>
+                <p>Integrated sentiment analysis with historical stock data using LSTM models.</p>
+            </div>
+            <div class="project-card">
+                <h3>News Watch</h3>
+                <p>Flutter News Application</p>
+                <p>Developed a news app integrating News API with 50+ sources.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2 class="section-title">Technical Skills</h2>
+        <div class="skills-container">
+            <div class="skills-category">
+                <h3>Languages</h3>
+                <div class="skills-list">
+                    <span class="skill-tag">Java</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">Dart</span>
+                    <span class="skill-tag">C</span>
+                </div>
+            </div>
+            <div class="skills-category">
+                <h3>Developer Tools</h3>
+                <div class="skills-list">
+                    <span class="skill-tag">Git</span>
+                    <span class="skill-tag">GitHub</span>
+                    <span class="skill-tag">VS Code</span>
+                    <span class="skill-tag">Android Studio</span>
+                    <span class="skill-tag">LaTex</span>
+                    <span class="skill-tag">Figma</span>
+                </div>
+            </div>
+            <div class="skills-category">
+                <h3>Web Technologies</h3>
+                <div class="skills-list">
+                    <span class="skill-tag">Flutter</span>
+                    <span class="skill-tag">TailwindCSS</span>
+                    <span class="skill-tag">Bootstrap</span>
+                    <span class="skill-tag">Node.js</span>
+                    <span class="skill-tag">Express.js</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="achievements">
+        <h2 class="section-title">Achievements</h2>
+        <div class="achievements-list">
+            <div class="achievement-item">
+                <h3>Research Publication</h3>
+                <p>"STOCKSIGHT: A Novel Approach to Stock Price Prediction with Sentiment Analysis and LSTM Networks" - IJEAST, Vol. 9</p>
+            </div>
+            <div class="achievement-item">
+                <h3>Workshop Facilitator</h3>
+                <p>Conducted workshops on "Git and GitHub" and "Figma" at VCET in 2023</p>
+            </div>
+            <div class="achievement-item">
+                <h3>Competition Wins</h3>
+                <p>1st place in Web Design at N.M.A.M. Institute of Technology</p>
+                <p>2nd place in Coding and Web Design at AIMIT, Mangalore</p>
+                <p>1st place in Web Design and 2nd place in Coding at SJEC, Mangalore</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scrolling for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(20px)';
+            section.style.transition = 'all 0.6s ease-out';
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
