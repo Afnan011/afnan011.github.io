@@ -52,7 +52,7 @@ formInputs.forEach(input => {
 });
 
 contactForm.addEventListener('submit', function(e) {
-  e.preventDefault();
+//   e.preventDefault();
   let isValid = true;
   formInputs.forEach(input => {
     if (!input.value.trim()) {
