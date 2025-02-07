@@ -26,6 +26,10 @@ body.dark-mode .menu-toggle {
 body.dark-mode .hero {
   background: linear-gradient(135deg, #60a5fa, #34d399);
 }
+/* 
+body.dark-mode .hero-content h1 span {
+  color: #ffffff;
+} */
 
 body.dark-mode .hero .social-links a {
   color: #f1f5f9;
