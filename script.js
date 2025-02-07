@@ -1,7 +1,28 @@
-const themeToggle = document.querySelector('.theme-toggle');
-themeToggle.addEventListener('click', () => {
-  document.body.classList.toggle('dark-mode');
-});
+// Theme handling code at the top of your script.js
+function setTheme(theme) {
+    document.body.className = theme;
+    localStorage.setItem('theme', theme);
+  }
+  
+  function toggleTheme() {
+    const currentTheme = localStorage.getItem('theme') || '';
+    const newTheme = currentTheme === 'dark-mode' ? '' : 'dark-mode';
+    setTheme(newTheme);
+  }
+  
+  // Initialize theme from localStorage
+  document.addEventListener('DOMContentLoaded', () => {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      setTheme(savedTheme);
+    }
+  });
+  
+  // Theme toggle event listener
+  const themeToggle = document.querySelector('.theme-toggle');
+  themeToggle.addEventListener('click', toggleTheme);
+  
+  // Rest of your JavaScript remains the same
 
 const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');

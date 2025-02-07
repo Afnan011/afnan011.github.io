@@ -1,0 +1,132 @@
+// At the top of your styles.scss file, update/add these variables
+// Light Mode
+$primary-color: #3b82f6;
+$secondary-color: #10b981;
+$bg-color: #ffffff;
+$text-color: #1f2937;
+$section-bg: #f8fafc;
+$card-bg: #ffffff;
+$nav-bg: rgba(255, 255, 255, 0.95);
+$shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+// Dark Mode
+$primary-color-dark: #60a5fa;
+$secondary-color-dark: #34d399;
+$bg-color-dark: #0f172a;
+$text-color-dark: #f1f5f9;
+$section-bg-dark: #1e293b;
+$card-bg-dark: #1e293b;
+$nav-bg-dark: rgba(15, 23, 42, 0.95);
+
+// Update the body.dark-mode styles
+body.dark-mode {
+  background-color: $bg-color-dark;
+  color: $text-color-dark;
+
+  // Navbar dark mode
+  .navbar {
+    background-color: $nav-bg-dark;
+    
+    .nav-links a {
+      color: $text-color-dark;
+      
+      &:hover {
+        color: $primary-color-dark;
+      }
+    }
+    
+    .theme-toggle {
+      color: $text-color-dark;
+    }
+  }
+
+  // Hero section dark mode
+  .hero {
+    background: linear-gradient(135deg, $primary-color-dark, $secondary-color-dark);
+    
+    .social-links a {
+      color: $text-color-dark;
+      border-color: $text-color-dark;
+      
+      &:hover {
+        background: $text-color-dark;
+        color: $bg-color-dark;
+      }
+    }
+  }
+
+  // Project cards dark mode
+  .project-card {
+    background-color: $card-bg-dark;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    
+    h3 {
+      color: $primary-color-dark;
+    }
+  }
+
+  // Skills section dark mode
+  .skills-category {
+    background-color: $card-bg-dark;
+    border-left-color: $primary-color-dark;
+    
+    h3 {
+      color: $primary-color-dark;
+      
+      &::after {
+        background: $secondary-color-dark;
+      }
+    }
+  }
+
+  // Contact form dark mode
+  .contact-form {
+    background-color: $card-bg-dark;
+    
+    input, textarea {
+      background-color: $bg-color-dark;
+      color: $text-color-dark;
+      border-color: $section-bg-dark;
+      
+      &:focus {
+        border-color: $primary-color-dark;
+      }
+    }
+  }
+
+  // Section backgrounds
+  section:nth-child(even) {
+    background-color: $section-bg-dark;
+  }
+
+  // Footer dark mode
+  .footer {
+    background-color: $section-bg-dark;
+  }
+
+  // Scroll to top button
+  .scroll-to-top {
+    background-color: $primary-color-dark;
+    
+    &:hover {
+      background-color: $secondary-color-dark;
+    }
+  }
+
+  // Section title
+  .section-title {
+    color: $primary-color-dark;
+  }
+}
+
+// Make sure transitions are smooth
+body, 
+.navbar,
+.project-card,
+.skills-category,
+.contact-form,
+input,
+textarea,
+.scroll-to-top {
+  transition: all 0.3s ease;
+}

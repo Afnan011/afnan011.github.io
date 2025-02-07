@@ -1,0 +1,143 @@
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #0f172a;
+  color: #f1f5f9;
+}
+
+/* Navbar Dark Mode */
+body.dark-mode .navbar {
+  background-color: rgba(15, 23, 42, 0.95);
+}
+
+body.dark-mode .navbar .nav-links a {
+  color: #f1f5f9;
+}
+
+body.dark-mode .navbar .nav-links a:hover {
+  color: #60a5fa;
+}
+
+body.dark-mode .theme-toggle,
+body.dark-mode .menu-toggle {
+  color: #f1f5f9;
+}
+
+/* Hero Section Dark Mode */
+body.dark-mode .hero {
+  background: linear-gradient(135deg, #60a5fa, #34d399);
+}
+
+body.dark-mode .hero .social-links a {
+  color: #f1f5f9;
+  border-color: #f1f5f9;
+}
+
+body.dark-mode .hero .social-links a:hover {
+  background: #f1f5f9;
+  color: #0f172a;
+}
+
+/* Projects Section Dark Mode */
+body.dark-mode .project-card {
+  background-color: #1e293b;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode .project-card h3 {
+  color: #60a5fa;
+}
+
+/* Skills Section Dark Mode */
+body.dark-mode .skills-category {
+  background-color: #1e293b;
+  border-left-color: #60a5fa;
+}
+
+body.dark-mode .skills-category h3 {
+  color: #60a5fa;
+}
+
+body.dark-mode .skills-category h3::after {
+  background: #34d399;
+}
+
+body.dark-mode .skill-tag {
+  background: #60a5fa;
+}
+
+body.dark-mode .skill-tag:hover {
+  background: #34d399;
+}
+
+/* Contact Form Dark Mode */
+body.dark-mode .contact-form {
+  background-color: #1e293b;
+}
+
+body.dark-mode .contact-form input,
+body.dark-mode .contact-form textarea {
+  background-color: #0f172a;
+  color: #f1f5f9;
+  border-color: #1e293b;
+}
+
+body.dark-mode .contact-form input:focus,
+body.dark-mode .contact-form textarea:focus {
+  border-color: #60a5fa;
+}
+
+body.dark-mode .submit-btn {
+  background: #60a5fa;
+}
+
+body.dark-mode .submit-btn:hover {
+  background: #34d399;
+}
+
+/* Section Backgrounds Dark Mode */
+body.dark-mode section:nth-child(even) {
+  background-color: #1e293b;
+}
+
+/* Footer Dark Mode */
+body.dark-mode .footer {
+  background-color: #1e293b;
+}
+
+/* Scroll to Top Button Dark Mode */
+body.dark-mode .scroll-to-top {
+  background-color: #60a5fa;
+}
+
+body.dark-mode .scroll-to-top:hover {
+  background-color: #34d399;
+}
+
+/* Section Titles Dark Mode */
+body.dark-mode .section-title {
+  color: #60a5fa;
+}
+
+/* Form Elements Dark Mode */
+body.dark-mode .form-group label {
+  color: #f1f5f9;
+}
+
+/* Navigation Mobile Menu Dark Mode */
+body.dark-mode .nav-links.active {
+  background-color: rgba(15, 23, 42, 0.95);
+}
+
+/* Add smooth transitions for theme switch */
+body,
+.navbar,
+.project-card,
+.skills-category,
+.contact-form,
+input,
+textarea,
+.scroll-to-top,
+.theme-toggle,
+.nav-links a {
+  transition: all 0.3s ease;
+}
