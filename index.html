@@ -101,6 +101,7 @@
     <div class="container">
       <h2 class="section-title">Get in Touch</h2>
       <form class="contact-form" action="https://formsubmit.co/eab30ec8c5828bdf1600a3b43a29841a" method="POST" id="contactForm">
+      <form class="contact-form" action="https://formsubmit.co/eab30ec8c5828bdf1600a3b43a29841a" method="POST" id="contactForm">
         <div class="form-group">
             <label for="name">Name</label>
             <input type="text" id="name" name="name" required />
@@ -113,10 +114,13 @@
             <label for="message">Message</label>
             <textarea id="message" name="message" rows="5" required></textarea>
         </div>
+        
+        <!-- Hidden fields for additional configuration -->
+        <input type="hidden" name="_next" value="https://afnan011.github.io/Portfolio-Website/"> 
         <input type="hidden" name="_captcha" value="false"> 
-    
         <button type="submit" class="submit-btn">Send Message</button>
         <p id="successMessage" style="display: none; color: green;">Message sent successfully!</p>
+        <p id="successMessage">Message sent successfully!</p>
     </form>
     
     </div>
