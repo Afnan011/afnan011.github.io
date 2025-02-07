@@ -52,31 +52,52 @@ formInputs.forEach(input => {
 });
 
 contactForm.addEventListener('submit', function(e) {
-//   e.preventDefault();
-  let isValid = true;
-  formInputs.forEach(input => {
-    if (!input.value.trim()) {
-      isValid = false;
-      input.classList.add('error');
-    } else {
-      input.classList.remove('error');
-    }
-  });
-
-  if (isValid) {
+    e.preventDefault(); 
     const submitBtn = this.querySelector('.submit-btn');
-    submitBtn.disabled = true;
-    submitBtn.textContent = 'Sending...';
-    setTimeout(() => {
-      submitBtn.textContent = 'Message Sent!';
-      this.reset();
-      setTimeout(() => {
-        submitBtn.disabled = false;
-        submitBtn.textContent = 'Send Message';
-      }, 2000);
-    }, 1500);
-  }
+
+    let isValid = true;
+    formInputs.forEach(input => {
+        if (!input.value.trim()) {
+            isValid = false;
+            input.classList.add('error');
+        } else {
+            input.classList.remove('error');
+        }
+    });
+
+    if (isValid) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending...';
+
+        let formData = new FormData(this);
+
+        fetch(this.action, {
+            method: this.method,
+            body: formData
+        }).then(response => {
+            if (response.ok) {
+                submitBtn.textContent = 'Message Sent!';
+                document.getElementById("successMessage").style.display = "block";
+                this.reset();
+
+                setTimeout(() => {
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Send Message';
+                    document.getElementById("successMessage").style.display = "none";
+                }, 3000);
+            } else {
+                alert("There was an error sending your message. Please try again.");
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Send Message';
+            }
+        }).catch(error => {
+            alert("Something went wrong. Please try again.");
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Send Message';
+        });
+    }
 });
+
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {

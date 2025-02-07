@@ -145,3 +145,12 @@ textarea,
 .nav-links a {
   transition: all 0.3s ease;
 }
+
+#successMessage
+{
+  display: none;
+  color: green;
+  text-align: center;
+  padding-top: 10px;
+  font-size: 16px;
+}
