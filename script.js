@@ -166,7 +166,6 @@ window.addEventListener('scroll', () => {
   }
 });
 
-// Remove loading screen when page is loaded
 window.addEventListener('load', () => {
   const loader = document.querySelector('.loading');
   setTimeout(() => {

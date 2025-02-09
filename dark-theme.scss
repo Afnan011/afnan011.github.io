@@ -47,6 +47,7 @@ body.dark-mode .social-links a {
   color: white !important;
 }
 
+
 body.dark-mode .social-links a:hover {
   background-color: white !important;
   color: var(--bg-color) !important;
@@ -58,15 +59,16 @@ body.dark-mode .project-card {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-body.dark-mode .project-card .project-links .project-link.source {
+body.dark-mode .project-card .project-links .project-link.source  {
   background: transparent !important;
   color: white !important;
   border: 1px solid var(--border-color);
 }
 
-body.dark-mode .project-card .project-links .project-link.source:hover {
-  background: rgba(255, 255, 255, 0.1) !important;
+body.dark-mode .project-card .project-links .project-link.source:hover  {
+  background: rgb(255 255 255 / 10%) !important;
 }
+
 
 body.dark-mode .project-card h3 {
   color: var(--primary-color);
@@ -166,13 +168,15 @@ textarea,
   transition: all 0.3s ease;
 }
 
-#successMessage {
+#successMessage
+{
   display: none;
   color: green;
   text-align: center;
   padding-top: 10px;
   font-size: 16px;
 }
+
 
 body.dark-mode .project-link {
   background-color: var(--primary-color);
@@ -182,4 +186,5 @@ body.dark-mode .project-link {
 
 body.dark-mode .project-link:hover {
   background-color: var(--secondary-color);
-}/*# sourceMappingURL=dark-theme.css.map */
+}
+

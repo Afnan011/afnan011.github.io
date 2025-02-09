@@ -199,6 +199,9 @@ section:nth-child(even) {
      object-fit: cover;
   transition: all 0.3s ease;
 }
+.project-card .aantarya {
+  background-color: #0f172a !important;
+}
 .project-card .project-overlay {
   display: none;
 }
@@ -255,11 +258,11 @@ section:nth-child(even) {
 }
 .project-card .project-links .project-link.source {
   background: rgba(255, 255, 255, 0.1);
-  color: white;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #000000;
+  border: 1px solid rgba(65, 62, 62, 0.2);
 }
 .project-card .project-links .project-link.source:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.2);
   transform: translateY(-2px);
 }
 .project-card:hover {
