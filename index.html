@@ -1,12 +1,16 @@
-<!DOCTYPE html>
+<!DOCTYPE html  >
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <title>Portfolio</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="dark-theme.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 </head>
-<body>
+<body class="dark-mode">
+  <div class="loading">
+    <div class="loading-spinner"></div>
+  </div>
   <nav class="navbar">
     <div class="nav-content">
       <a href="#" class="nav-logo">Mahammad Afnan</a>
@@ -28,10 +32,10 @@
       <h1>Mahammad <span>Afnan</span></h1>
       <p>RPG Developer | MCA Graduate</p>
       <div class="social-links">
-        <a href="mailto:mahammad.afnan.m@gmail.com">Email</a>
-        <a href="https://www.linkedin.com/in/mahammad-afnan-m">LinkedIn</a>
-        <a href="https://github.com/afnan011">GitHub</a>
-        <a href="https://leetcode.com/afnan011">LeetCode</a>
+        <a href="mailto:mahammad.afnan.m@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+        <a href="https://www.linkedin.com/in/mahammad-afnan-m"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a href="https://github.com/afnan011"><i class="fab fa-github"></i> GitHub</a>
+        <a href="https://leetcode.com/afnan011"><i class="fas fa-code"></i> LeetCode</a>
       </div>
     </div>
   </section>
@@ -41,20 +45,83 @@
       <h2 class="section-title">Projects</h2>
       <div class="projects-grid">
         <div class="project-card">
-          <h3>Aantarya 2k24</h3>
-          <p>National Level Inter College IT Fest Website</p>
-          <p>Led a team of 3 in developing a website that increased event registration by 30%.</p>
-          <p>Tech: HTML, CSS, JavaScript, Node.js, Express, MongoDB</p>
+          <div class="project-image-wrapper">
+            <img 
+              src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&h=450&fit=crop" 
+              alt="Aantarya 2k24" 
+              class="project-image"
+            >
+          </div>
+          <div class="project-content">
+            <h3>Aantarya 2k24</h3>
+            <p class="project-brief">National Level Inter College IT Fest Website</p>
+            <p>Led a team of 3 in developing a website that increased event registration by 30%.</p>
+            <p class="tech-stack">
+              <i class="fas fa-code"></i> HTML, CSS, JavaScript, Express, MongoDB
+            </p>
+          </div>
+          <div class="project-links">
+            <a href="https://aantarya.netlify.app/" target="_blank" class="project-link demo">
+              <i class="fas fa-external-link-alt"></i> Live Demo
+            </a>
+            <a href="https://github.com/Afnan011/aantarya-backend" target="_blank" class="project-link source">
+              <i class="fab fa-github"></i> Source Code
+            </a>
+          </div>
         </div>
         <div class="project-card">
-          <h3>SmartStockInsight</h3>
-          <p>Web Application for Predicting Stock Prices</p>
-          <p>Integrated sentiment analysis with historical stock data using LSTM models.</p>
+          <div class="project-image-wrapper">
+            <img 
+              src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&h=450&fit=crop" 
+              alt="SmartStockInsight" 
+              class="project-image"
+              width="800"
+              height="450"
+            >
+          </div>
+          <div class="project-content">
+            <h3>SmartStockInsight</h3>
+            <p class="project-brief">Web Application for Predicting Stock Prices</p>
+            <p>Integrated sentiment analysis with historical stock data using LSTM models.</p>
+            <p class="tech-stack">
+              <i class="fas fa-code"></i> Python, TensorFlow, Flask, React
+            </p>
+          </div>
+          <div class="project-links">
+            <a href="https://smartstockinsight.onrender.com/" target="_blank" class="project-link demo">
+              <i class="fas fa-external-link-alt"></i> Live Demo
+            </a>
+            <a href="https://github.com/Afnan011/SmartStockInsight" target="_blank" class="project-link source">
+              <i class="fab fa-github"></i> Source Code
+            </a>
+          </div>
         </div>
         <div class="project-card">
-          <h3>News Watch</h3>
-          <p>Flutter News Application</p>
-          <p>Developed a news app integrating News API with 50+ sources.</p>
+          <div class="project-image-wrapper">
+            <img 
+              src="https://images.unsplash.com/photo-1495020689067-958852a7765e?w=800&h=450&fit=crop" 
+              alt="News Watch" 
+              class="project-image"
+              width="800"
+              height="450"
+            >
+          </div>
+          <div class="project-content">
+            <h3>News Watch</h3>
+            <p class="project-brief">Flutter News Application</p>
+            <p>Developed a news app integrating News API with 50+ sources.</p>
+            <p class="tech-stack">
+              <i class="fas fa-code"></i> Dart, Flutter, News API
+            </p>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/Afnan011/NewsWatch" target="_blank" class="project-link demo">
+              <i class="fas fa-external-link-alt"></i> Live Demo
+            </a>
+            <a href="https://github.com/Afnan011/NewsWatch" target="_blank" class="project-link source">
+              <i class="fab fa-github"></i> Source Code
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -101,7 +168,6 @@
     <div class="container">
       <h2 class="section-title">Get in Touch</h2>
       <form class="contact-form" action="https://formsubmit.co/eab30ec8c5828bdf1600a3b43a29841a" method="POST" id="contactForm">
-      <form class="contact-form" action="https://formsubmit.co/eab30ec8c5828bdf1600a3b43a29841a" method="POST" id="contactForm">
         <div class="form-group">
             <label for="name">Name</label>
             <input type="text" id="name" name="name" required />
@@ -130,6 +196,10 @@
       <p>&copy; 2024 Mahammad Afnan M. All rights reserved.</p>
     </div>
   </footer>
+
+  <button id="scrollToTop" class="scroll-to-top" title="Scroll to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
 
   <script src="script.js"></script>
 </body>

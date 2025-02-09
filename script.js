@@ -165,3 +165,11 @@ window.addEventListener('scroll', () => {
     scrollToTopBtn.classList.remove('visible');
   }
 });
+
+// Remove loading screen when page is loaded
+window.addEventListener('load', () => {
+  const loader = document.querySelector('.loading');
+  setTimeout(() => {
+    loader.style.display = 'none';
+  }, 500);
+});
