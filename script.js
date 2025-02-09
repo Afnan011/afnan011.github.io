@@ -160,19 +160,17 @@ window.addEventListener('load', () => {
   }, 500);
 });
 
-// Wait until the DOM is fully loaded
 document.addEventListener('DOMContentLoaded', function() {
   const menuToggle = document.querySelector('.menu-toggle');
   const navLinks = document.querySelector('.nav-links');
 
-  // Toggle menu when hamburger is clicked
   menuToggle.addEventListener('click', function(e) {
-    e.stopPropagation(); // Prevent click from bubbling to document
+    e.stopPropagation();
     navLinks.classList.toggle('active');
     this.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
   });
 
-  // Close menu when clicking anywhere outside
+
   document.addEventListener('click', function(e) {
     if (!e.target.closest('.nav-links') && !e.target.closest('.menu-toggle')) {
       navLinks.classList.remove('active');
@@ -180,7 +178,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-  // Close menu when clicking a nav link
   document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', () => {
       navLinks.classList.remove('active');
