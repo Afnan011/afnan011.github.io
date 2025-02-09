@@ -1,138 +1,149 @@
-/* Dark Mode Styles */
+/* Dark mode variables and base styles */
 body.dark-mode {
-  background-color: #0f172a;
-  color: #f1f5f9;
+  --bg-color: #0f172a;
+  --text-color: #e2e8f0;
+  --section-bg: #1e293b;
+  --primary-color: #3b82f6;
+  --secondary-color: #10b981;
+  --card-bg: #1e293b;
+  --border-color: #334155;
 }
 
-/* Navbar Dark Mode */
+body.dark-mode {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
 body.dark-mode .navbar {
-  background-color: rgba(15, 23, 42, 0.95);
+  background-color: rgba(15, 23, 42, 0.9);
+  border-bottom: 1px solid var(--border-color);
 }
 
 body.dark-mode .navbar .nav-links a {
-  color: #f1f5f9;
+  color: var(--text-color);
 }
 
 body.dark-mode .navbar .nav-links a:hover {
-  color: #60a5fa;
+  color: var(--primary-color);
 }
 
 body.dark-mode .theme-toggle,
 body.dark-mode .menu-toggle {
-  color: #f1f5f9;
+  color: var(--text-color);
 }
 
-/* Hero Section Dark Mode */
 body.dark-mode .hero {
-  background: linear-gradient(135deg, #60a5fa, #34d399);
-}
-/* 
-body.dark-mode .hero-content h1 span {
-  color: #ffffff;
-} */
-
-body.dark-mode .hero .social-links a {
-  color: #f1f5f9;
-  border-color: #f1f5f9;
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
 }
 
-body.dark-mode .hero .social-links a:hover {
-  background: #f1f5f9;
-  color: #0f172a;
+body.dark-mode .hero h1,
+body.dark-mode .hero p {
+  color: var(--text-color);
 }
 
-/* Projects Section Dark Mode */
+body.dark-mode .social-links a {
+  background-color: transparent;
+  border: 1px solid white !important;
+  color: white !important;
+}
+
+
+body.dark-mode .social-links a:hover {
+  background-color: white !important;
+  color: var(--bg-color) !important;
+}
+
 body.dark-mode .project-card {
-  background-color: #1e293b;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 body.dark-mode .project-card h3 {
-  color: #60a5fa;
+  color: var(--primary-color);
 }
 
-/* Skills Section Dark Mode */
 body.dark-mode .skills-category {
-  background-color: #1e293b;
-  border-left-color: #60a5fa;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-left-color: var(--primary-color);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 body.dark-mode .skills-category h3 {
-  color: #60a5fa;
+  color: var(--primary-color);
 }
 
 body.dark-mode .skills-category h3::after {
-  background: #34d399;
+  background: var(--secondary-color);
 }
 
 body.dark-mode .skill-tag {
-  background: #60a5fa;
+  background: var(--primary-color);
 }
 
 body.dark-mode .skill-tag:hover {
-  background: #34d399;
+  background: var(--secondary-color);
 }
 
-/* Contact Form Dark Mode */
 body.dark-mode .contact-form {
-  background-color: #1e293b;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 body.dark-mode .contact-form input,
 body.dark-mode .contact-form textarea {
-  background-color: #0f172a;
-  color: #f1f5f9;
-  border-color: #1e293b;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
 }
 
 body.dark-mode .contact-form input:focus,
 body.dark-mode .contact-form textarea:focus {
-  border-color: #60a5fa;
+  border-color: var(--primary-color);
+}
+
+body.dark-mode .contact-form label {
+  color: var(--text-color);
 }
 
 body.dark-mode .submit-btn {
-  background: #60a5fa;
+  background: var(--primary-color);
 }
 
 body.dark-mode .submit-btn:hover {
-  background: #34d399;
+  background: var(--secondary-color);
 }
 
-/* Section Backgrounds Dark Mode */
 body.dark-mode section:nth-child(even) {
-  background-color: #1e293b;
+  background-color: var(--section-bg);
 }
 
-/* Footer Dark Mode */
 body.dark-mode .footer {
-  background-color: #1e293b;
+  background-color: var(--section-bg);
 }
 
-/* Scroll to Top Button Dark Mode */
 body.dark-mode .scroll-to-top {
-  background-color: #60a5fa;
+  background-color: var(--primary-color);
 }
 
 body.dark-mode .scroll-to-top:hover {
-  background-color: #34d399;
+  background-color: var(--secondary-color);
 }
 
-/* Section Titles Dark Mode */
 body.dark-mode .section-title {
-  color: #60a5fa;
+  color: var(--primary-color);
 }
 
-/* Form Elements Dark Mode */
 body.dark-mode .form-group label {
-  color: #f1f5f9;
+  color: var(--text-color);
 }
 
-/* Navigation Mobile Menu Dark Mode */
 body.dark-mode .nav-links.active {
-  background-color: rgba(15, 23, 42, 0.95);
+  background-color: rgba(15, 23, 42, 0.9);
 }
 
-/* Add smooth transitions for theme switch */
 body,
 .navbar,
 .project-card,
@@ -154,3 +165,15 @@ textarea,
   padding-top: 10px;
   font-size: 16px;
 }
+
+
+body.dark-mode .project-link {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+}
+
+body.dark-mode .project-link:hover {
+  background-color: var(--secondary-color);
+}
+
