@@ -24,19 +24,6 @@ function setTheme(theme) {
   
   // Rest of your JavaScript remains the same
 
-const menuToggle = document.querySelector('.menu-toggle');
-const navLinks = document.querySelector('.nav-links');
-
-menuToggle.addEventListener('click', () => {
-  navLinks.classList.toggle('active');
-});
-
-document.querySelectorAll('.nav-links a').forEach(link => {
-  link.addEventListener('click', () => {
-    navLinks.classList.remove('active');
-  });
-});
-
 const contactForm = document.querySelector('.contact-form');
 const formInputs = contactForm.querySelectorAll('input, textarea');
 
@@ -171,4 +158,33 @@ window.addEventListener('load', () => {
   setTimeout(() => {
     loader.style.display = 'none';
   }, 500);
+});
+
+// Wait until the DOM is fully loaded
+document.addEventListener('DOMContentLoaded', function() {
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+
+  // Toggle menu when hamburger is clicked
+  menuToggle.addEventListener('click', function(e) {
+    e.stopPropagation(); // Prevent click from bubbling to document
+    navLinks.classList.toggle('active');
+    this.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
+  });
+
+  // Close menu when clicking anywhere outside
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.nav-links') && !e.target.closest('.menu-toggle')) {
+      navLinks.classList.remove('active');
+      menuToggle.textContent = '☰';
+    }
+  });
+
+  // Close menu when clicking a nav link
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('active');
+      menuToggle.textContent = '☰';
+    });
+  });
 });

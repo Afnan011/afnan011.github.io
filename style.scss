@@ -65,6 +65,10 @@ body {
     section:nth-child(even) {
       background: $section-bg-dark;
     }
+
+    .nav-links {
+      background: rgba(15, 23, 42, 0.95) !important;
+    }
   }
 }
 
@@ -112,15 +116,10 @@ body {
       }
 
       &.active {
-        position: fixed;
-        top: 0;
-        right: 0;
-        height: 100vh;
-        width: 70%;
         background: $nav-bg;
         flex-direction: column;
-        padding: 5rem 2rem;
         transition: $transition;
+        display: none;
       }
     }
 
@@ -534,69 +533,88 @@ section {
 
 // RESPONSIVE LAYOUT
 @media (max-width: 768px) {
+  .menu-toggle {
+    display: block !important;
+  }
+
   .nav-content {
-    .menu-toggle {
-      display: block;
-    }
+    padding: 0 1rem;
+    position: relative;
+    
     .nav-links {
-      right: -100%;
+      display: none !important;
+      position: fixed;
+      top: 60px;
+      right: 0;
+      width: 250px;
+      height: 100vh;
+      background: rgba(255, 255, 255, 0.95);
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 2rem 1rem;
+      box-shadow: -2px 0 8px rgba(0, 0, 0, 0.15);
+      z-index: 1000;
+
+      &.active {
+        display: flex !important;
+      }
+
+      a {
+        padding: 1rem;
+        width: 100%;
+        text-align: left;
+      }
+    }
+
+    .toggle-container {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .nav-logo {
+      font-size: 1.2rem;
     }
   }
-
-  .hero {
-    padding-top: 4rem;
-    min-height: 100vh;
-
-    .hero-content {
-      padding-top: 2rem;
-
-      h1 {
-        font-size: 2.5rem;
-      }
-      p {
-        font-size: 1.1rem;
-      }
-    }
+  
+  /* Adjust hero typography */
+  .hero h1 {
+    font-size: 2.5rem;
   }
-
+  .hero p {
+    font-size: 1.1rem;
+  }
+  
+  /* Adjust section title size */
   .section-title {
     font-size: 2rem;
   }
-
+  
+  /* Stack social links vertically */
   .social-links {
     flex-direction: column;
     align-items: center;
-
-    a {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.5rem 1rem;
-      border: 1px solid currentColor;
-      border-radius: 4px;
-      transition: all 0.3s ease;
-
-      &:hover {
-        background: $primary-color;
-        color: $bg-color;
-        border-color: $primary-color;
-      }
-    }
   }
-
-
+  .social-links a {
+    width: 200px;
+  }
+  
+  /* Adjust skills grid layout */
   .skills-grid {
     grid-template-columns: 1fr;
     padding: 0 1rem;
   }
-
   .skills-category {
     padding: 1.5rem;
   }
-
   .skill-tag {
     padding: 0.5rem 1rem;
     font-size: 0.9rem;
+  }
+  
+  /* New rule: Ensure that the projects grid displays one card per row */
+  .projects-grid {
+    grid-template-columns: 1fr;
   }
 }
 

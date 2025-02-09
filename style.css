@@ -38,6 +38,9 @@ body.dark-mode .footer {
 body.dark-mode section:nth-child(even) {
   background: #1e293b;
 }
+body.dark-mode .nav-links {
+  background: rgba(15, 23, 42, 0.95) !important;
+}
 
 .navbar {
   position: fixed;
@@ -79,15 +82,10 @@ body.dark-mode section:nth-child(even) {
   color: #3b82f6;
 }
 .navbar .nav-content .nav-links.active {
-  position: fixed;
-  top: 0;
-  right: 0;
-  height: 100vh;
-  width: 70%;
   background: rgba(255, 255, 255, 0.95);
   flex-direction: column;
-  padding: 5rem 2rem;
   transition: all 0.3s ease;
+  display: none;
 }
 .navbar .nav-content .theme-toggle,
 .navbar .nav-content .menu-toggle {
@@ -446,46 +444,63 @@ section:nth-child(even) {
 }
 
 @media (max-width: 768px) {
-  .nav-content .menu-toggle {
-    display: block;
+  .menu-toggle {
+    display: block !important;
+  }
+  .nav-content {
+    padding: 0 1rem;
+    position: relative;
   }
   .nav-content .nav-links {
-    right: -100%;
+    display: none !important;
+    position: fixed;
+    top: 60px;
+    right: 0;
+    width: 250px;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.95);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem 1rem;
+    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
   }
-  .hero {
-    padding-top: 4rem;
-    min-height: 100vh;
+  .nav-content .nav-links.active {
+    display: flex !important;
   }
-  .hero .hero-content {
-    padding-top: 2rem;
+  .nav-content .nav-links a {
+    padding: 1rem;
+    width: 100%;
+    text-align: left;
   }
-  .hero .hero-content h1 {
+  .nav-content .toggle-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .nav-content .nav-logo {
+    font-size: 1.2rem;
+  }
+  /* Adjust hero typography */
+  .hero h1 {
     font-size: 2.5rem;
   }
-  .hero .hero-content p {
+  .hero p {
     font-size: 1.1rem;
   }
+  /* Adjust section title size */
   .section-title {
     font-size: 2rem;
   }
+  /* Stack social links vertically */
   .social-links {
     flex-direction: column;
     align-items: center;
   }
   .social-links a {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.5rem 1rem;
-    border: 1px solid currentColor;
-    border-radius: 4px;
-    transition: all 0.3s ease;
+    width: 200px;
   }
-  .social-links a:hover {
-    background: #3b82f6;
-    color: #ffffff;
-    border-color: #3b82f6;
-  }
+  /* Adjust skills grid layout */
   .skills-grid {
     grid-template-columns: 1fr;
     padding: 0 1rem;
@@ -496,6 +511,10 @@ section:nth-child(even) {
   .skill-tag {
     padding: 0.5rem 1rem;
     font-size: 0.9rem;
+  }
+  /* New rule: Ensure that the projects grid displays one card per row */
+  .projects-grid {
+    grid-template-columns: 1fr;
   }
 }
 .loading {
