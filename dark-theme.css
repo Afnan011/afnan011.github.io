@@ -88,11 +88,14 @@ body.dark-mode .skills-category h3::after {
 }
 
 body.dark-mode .skill-tag {
-  background: var(--primary-color);
+  background: transparent;
+  color: var(--text-color) !important;
+  border: 1px solid #ffffff !important;
 }
 
 body.dark-mode .skill-tag:hover {
   background: var(--secondary-color);
+  color: var(--bg-color) !important;
 }
 
 body.dark-mode .contact-form {

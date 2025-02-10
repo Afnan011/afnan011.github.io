@@ -381,7 +381,7 @@ section {
     list-style: none;
 
     .skill-tag {
-      background: $primary-color;
+      // background: $primary-color;
       color: #ffffff;
       padding: 0.6rem 1.2rem;
       border-radius: 25px;
@@ -394,10 +394,13 @@ section {
       gap: 0.5rem;
       opacity: 0;
       animation: fadeIn 0.5s ease forwards;
+      border: 1px solid $text-color;
+      color: $text-color;
 
       &:hover {
         transform: translateY(-2px);
         background: $secondary-color;
+        color: $bg-color;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
       }
     }

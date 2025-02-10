@@ -312,7 +312,6 @@ section:nth-child(even) {
   list-style: none;
 }
 .skills-category .skills-list .skill-tag {
-  background: #3b82f6;
   color: #ffffff;
   padding: 0.6rem 1.2rem;
   border-radius: 25px;
@@ -325,10 +324,13 @@ section:nth-child(even) {
   gap: 0.5rem;
   opacity: 0;
   animation: fadeIn 0.5s ease forwards;
+  border: 1px solid #1f2937;
+  color: #1f2937;
 }
 .skills-category .skills-list .skill-tag:hover {
   transform: translateY(-2px);
   background: #10b981;
+  color: #ffffff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 .skills-category .skills-list .skill-tag:nth-child(1) {
