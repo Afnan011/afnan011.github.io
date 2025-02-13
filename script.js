@@ -134,8 +134,8 @@ document.querySelectorAll('.skill-tag').forEach((tag, index) => {
 });
 
 const scrollToTopBtn = document.createElement('button');
-scrollToTopBtn.innerHTML = '↑';
 scrollToTopBtn.className = 'scroll-to-top';
+scrollToTopBtn.classList.add('fas', 'fa-arrow-up');
 document.body.appendChild(scrollToTopBtn);
 
 scrollToTopBtn.addEventListener('click', () => {

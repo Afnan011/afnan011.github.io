@@ -332,6 +332,7 @@ section:nth-child(even) {
   background: #10b981;
   color: #ffffff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  border: none !important;
 }
 .skills-category .skills-list .skill-tag:nth-child(1) {
   animation-delay: 0.1s;
@@ -397,9 +398,9 @@ section:nth-child(even) {
 }
 
 .footer {
+  background: #f8fafc;
   padding: 1rem 0px;
   text-align: center;
-  background: black;
 }
 
 .scroll-to-top {
@@ -483,18 +484,15 @@ section:nth-child(even) {
   .nav-content .nav-logo {
     font-size: 1.2rem;
   }
-  /* Adjust hero typography */
   .hero h1 {
     font-size: 2.5rem;
   }
   .hero p {
     font-size: 1.1rem;
   }
-  /* Adjust section title size */
   .section-title {
     font-size: 2rem;
   }
-  /* Stack social links vertically */
   .social-links {
     flex-direction: column;
     align-items: center;
@@ -502,7 +500,6 @@ section:nth-child(even) {
   .social-links a {
     width: 200px;
   }
-  /* Adjust skills grid layout */
   .skills-grid {
     grid-template-columns: 1fr;
     padding: 0 1rem;
@@ -514,9 +511,17 @@ section:nth-child(even) {
     padding: 0.5rem 1rem;
     font-size: 0.9rem;
   }
-  /* New rule: Ensure that the projects grid displays one card per row */
   .projects-grid {
     grid-template-columns: 1fr;
+  }
+  .project-card .project-links .project-link {
+    font-size: 0.8rem;
+  }
+  .footer p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
   }
 }
 .loading {

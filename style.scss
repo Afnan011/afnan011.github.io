@@ -402,6 +402,7 @@ section {
         background: $secondary-color;
         color: $bg-color;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        border: none !important;
       }
     }
 
@@ -478,14 +479,12 @@ section {
 
 // FOOTER
 .footer {
-  // background: $section-bg;
+  background: $section-bg;
   padding: 1rem 0px;
   text-align: center;
-  background: black;
 }
 
 
-// SCROLL-TO-TOP BUTTON
 .scroll-to-top {
   position: fixed;
   bottom: 20px;
@@ -580,20 +579,18 @@ section {
     }
   }
   
-  /* Adjust hero typography */
   .hero h1 {
     font-size: 2.5rem;
   }
+
   .hero p {
     font-size: 1.1rem;
   }
   
-  /* Adjust section title size */
   .section-title {
     font-size: 2rem;
   }
   
-  /* Stack social links vertically */
   .social-links {
     flex-direction: column;
     align-items: center;
@@ -602,7 +599,6 @@ section {
     width: 200px;
   }
   
-  /* Adjust skills grid layout */
   .skills-grid {
     grid-template-columns: 1fr;
     padding: 0 1rem;
@@ -615,10 +611,23 @@ section {
     font-size: 0.9rem;
   }
   
-  /* New rule: Ensure that the projects grid displays one card per row */
   .projects-grid {
     grid-template-columns: 1fr;
   }
+
+  .project-card .project-links .project-link {
+    font-size: 0.8rem;
+  }
+
+  .footer p
+  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+
 }
 
 .loading {
@@ -642,6 +651,8 @@ section {
   border-radius: 50%;
   animation: spin 1s linear infinite;
 }
+
+
 
 @keyframes spin {
   0% { transform: rotate(0deg); }
