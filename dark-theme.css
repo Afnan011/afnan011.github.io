@@ -29,7 +29,7 @@ body.dark-mode .navbar .nav-links a:hover {
 
 body.dark-mode .theme-toggle,
 body.dark-mode .menu-toggle {
-  color: var(--text-color);
+  color: var(--text-color) !important;
 }
 
 body.dark-mode .hero {
