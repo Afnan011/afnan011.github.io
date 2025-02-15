@@ -29,7 +29,7 @@ body.dark-mode .navbar .nav-links a:hover {
 
 body.dark-mode .theme-toggle,
 body.dark-mode .menu-toggle {
-  color: var(--text-color) !important;
+  color: var(--text-color);
 }
 
 body.dark-mode .hero {
@@ -185,4 +185,17 @@ body.dark-mode .project-link {
 
 body.dark-mode .project-link:hover {
   background-color: var(--secondary-color);
+}
+
+body.dark-mode .education-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-left: 4px solid var(--primary-color);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+body.dark-mode .education-card h3 {
+  color: var(--primary-color);
+}
+body.dark-mode .education-card .grade {
+  color: var(--secondary-color);
 }/*# sourceMappingURL=dark-theme.css.map */

@@ -350,6 +350,46 @@ section:nth-child(even) {
   animation-delay: 0.5s;
 }
 
+.education-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.education-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border-left: 4px solid #3b82f6;
+}
+.education-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+.education-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: #3b82f6;
+}
+.education-card .institution {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+.education-card .duration {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin-bottom: 0.5rem;
+}
+.education-card .grade {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #10b981;
+}
+
 .contact-form {
   max-width: 600px;
   margin: 0 auto;
@@ -516,6 +556,19 @@ section:nth-child(even) {
   }
   .project-card .project-links .project-link {
     font-size: 0.8rem;
+  }
+  .education-grid {
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
+  }
+  .education-card {
+    padding: 1.5rem;
+  }
+  .education-card h3 {
+    font-size: 1.2rem;
+  }
+  .education-card .institution {
+    font-size: 1rem;
   }
   .footer p {
     display: flex;
