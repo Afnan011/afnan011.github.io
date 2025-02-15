@@ -41,6 +41,7 @@ formInputs.forEach(input => {
 contactForm.addEventListener('submit', function(e) {
     e.preventDefault(); 
     const submitBtn = this.querySelector('.submit-btn');
+    const loader = document.querySelector('.loading');
 
     let isValid = true;
     formInputs.forEach(input => {
@@ -55,6 +56,8 @@ contactForm.addEventListener('submit', function(e) {
     if (isValid) {
         submitBtn.disabled = true;
         submitBtn.textContent = 'Sending...';
+        loader.style.display = 'flex';
+        loader.style.background = 'transparent';
 
         let formData = new FormData(this);
 
@@ -64,23 +67,27 @@ contactForm.addEventListener('submit', function(e) {
         }).then(response => {
             if (response.ok) {
                 submitBtn.textContent = 'Message Sent!';
+                loader.style.display = 'none';
                 document.getElementById("successMessage").style.display = "block";
                 this.reset();
 
                 setTimeout(() => {
                     submitBtn.disabled = false;
                     submitBtn.textContent = 'Send Message';
+                    loader.style.display = 'none';
                     document.getElementById("successMessage").style.display = "none";
                 }, 3000);
             } else {
                 alert("There was an error sending your message. Please try again.");
                 submitBtn.disabled = false;
                 submitBtn.textContent = 'Send Message';
+                loader.style.display = 'none';
             }
         }).catch(error => {
             alert("Something went wrong. Please try again.");
             submitBtn.disabled = false;
             submitBtn.textContent = 'Send Message';
+            loader.style.display = 'none';
         });
     }
 });
