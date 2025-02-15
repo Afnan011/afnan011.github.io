@@ -198,4 +198,38 @@ body.dark-mode .education-card h3 {
 }
 body.dark-mode .education-card .grade {
   color: var(--secondary-color);
+}
+
+body.dark-mode .certificate-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-left: 4px solid var(--primary-color);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+body.dark-mode .certificate-card h3 {
+  color: var(--primary-color);
+}
+body.dark-mode .certificate-card .certificate-brief {
+  color: var(--text-color);
+}
+body.dark-mode .certificate-card .certificate-details {
+  color: var(--text-color);
+  opacity: 0.8;
+}
+
+body.dark-mode .modal {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+body.dark-mode .close-modal {
+  color: var(--text-color);
+}
+body.dark-mode .close-modal:hover {
+  color: var(--primary-color);
+}
+body.dark-mode .view-certificate {
+  background: var(--primary-color);
+  color: white;
+}
+body.dark-mode .view-certificate:hover {
+  background: var(--secondary-color);
 }/*# sourceMappingURL=dark-theme.css.map */

@@ -20,6 +20,7 @@
         <a href="#about">About</a>
         <a href="#education">Education</a>
         <a href="#projects">Projects</a>
+        <a href="#certificates">Certificates</a>
         <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
       </div>
@@ -33,7 +34,7 @@
   <section class="hero" id="about">
     <div class="hero-content">
       <h1>Mahammad <span>Afnan</span></h1>
-      <p>RPG Developer | MCA Graduate</p>
+      <p>Fullstack Developer | MCA Graduate</p>
       <div class="social-links">
         <a href="mailto:mahammad.afnan.m@gmail.com" target="_blank"><i class="fas fa-envelope"></i> Email</a>
         <a href="https://www.linkedin.com/in/mahammad-afnan-m" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
@@ -63,7 +64,6 @@
       </div>
     </div>
   </section>
-
   <section id="projects">
     <div class="container">
       <h2 class="section-title">Projects</h2>
@@ -188,6 +188,70 @@
     </div>
   </section>
 
+  <section id="certificates">
+    <div class="container">
+      <h2 class="section-title">Certificates & Achievements</h2>
+      <div class="certificates-grid">
+
+        <div class="certificate-card">
+          <h3>Workshop Conductor</h3>
+          <p class="certificate-brief">Successfully conducted workshop on "Git and GitHub"at VCET</p>
+          <p class="certificate-details">Educated students on essentials of version control and collaboration techniques</p>
+          <button class="view-certificate" data-certificate="./images/git-and-github.jpg">
+            <i class="fas fa-certificate"></i> View Certificate
+          </button>
+        </div>
+
+        
+        <div class="certificate-card">
+          <h3>Postman Engineer</h3>
+          <p class="certificate-brief">Postman Engineer Learning Path Certificate</p>
+          <p class="certificate-details">Demonstrated proficiency in API development and testing</p>
+          <button class="view-certificate" data-certificate="images/postman.jpg">
+            <i class="fas fa-certificate"></i> View Certificate
+          </button>
+        </div>
+        
+        <div class="certificate-card">
+          <h3>C# Programming</h3>
+          <p class="certificate-brief">FreeCodeCamp Foundational C# with Microsoft Certificate</p>
+          <p class="certificate-details">Showcased expertise in C# programming fundamentals</p>
+          <button class="view-certificate" data-certificate="./images/c-sharp.png">
+            <i class="fas fa-certificate"></i> View Certificate
+          </button>
+        </div>
+        
+        <div class="certificate-card">
+          <h3>Web Design</h3>
+          <p class="certificate-brief">FreeCodeCamp Web Design Certificate</p>
+          <p class="certificate-details">Validated skills in responsive web design and front-end development</p>
+          <button class="view-certificate" data-certificate="./images/web-design.png">
+            <i class="fas fa-certificate"></i> View Certificate
+          </button>
+        </div>
+
+        <div class="certificate-card">
+          <h3>Workshop Instructor</h3>
+          <p class="certificate-brief">Effectively led a "Figma" workshop at VCET</p>
+          <p class="certificate-details">Taught UI/UX fundamentals and prototyping using essential design tools.</p>
+          <button class="view-certificate" data-certificate="./images/git-and-github.jpg"">
+            <i class="fas fa-certificate"></i> View Certificate
+          </button>
+        </div>
+
+        <div class="certificate-card">
+          <h3>PostgreSQL </h3>
+          <p class="certificate-brief">PostgreSQL: Advanced Queries Certificate</p>
+          <p class="certificate-details">Demonstrated proficiency in advanced SQL queries and database optimization</p>
+          <button class="view-certificate" data-certificate="./images/postgres.jpg">
+            <i class="fas fa-certificate"></i> View Certificate
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
   <section id="contact">
     <div class="container">
       <h2 class="section-title">Get in Touch</h2>
@@ -220,5 +284,12 @@
     </div>
   </footer>
   <script src="script.js"></script>
+  <div class="modal" style="display: none;" id="certificateModal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <img id="modalImage" src="" alt="Certificate">
+    </div>
+    <script src="modal.js"></script>
+  </div>
 </body>
 </html>
