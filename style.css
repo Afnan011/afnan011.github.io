@@ -559,7 +559,7 @@ section:nth-child(even) {
 }
 
 .toggle {
-  --size: 2rem;
+  --size: 1.8rem;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -637,6 +637,9 @@ section:nth-child(even) {
 @media (max-width: 768px) {
   .menu-toggle {
     display: block !important;
+  }
+  .toggle {
+    --size: 1.5rem;
   }
   .nav-content {
     padding: 0 1rem;
