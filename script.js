@@ -1,26 +1,23 @@
-// Theme handling code at the top of your script.js
-function setTheme(theme) {
-    document.body.className = theme;
-    localStorage.setItem('theme', theme);
+const themeToggle = document.getElementById('theme-toggle');
+
+// Set initial state based on localStorage
+themeToggle.checked = localStorage.getItem('theme') !== 'dark-mode';
+
+themeToggle.addEventListener('change', () => {
+  if (!themeToggle.checked) {
+    document.body.classList.add('dark-mode');
+    localStorage.setItem('theme', 'dark-mode');
+  } else {
+    document.body.classList.remove('dark-mode');
+    localStorage.removeItem('theme');
   }
-  
-  function toggleTheme() {
-    const currentTheme = localStorage.getItem('theme') || '';
-    const newTheme = currentTheme === 'dark-mode' ? '' : 'dark-mode';
-    setTheme(newTheme);
-  }
-  
-  // Initialize theme from localStorage
-  document.addEventListener('DOMContentLoaded', () => {
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme) {
-      setTheme(savedTheme);
-    }
-  });
-  
-  // Theme toggle event listener
-  const themeToggle = document.querySelector('.theme-toggle');
-  themeToggle.addEventListener('click', toggleTheme);
+});
+
+// Set initial theme on page load
+if (localStorage.getItem('theme') === 'dark-mode') {
+  document.body.classList.add('dark-mode');
+  themeToggle.checked = false;
+}
   
   // Rest of your JavaScript remains the same
 
@@ -76,7 +73,7 @@ contactForm.addEventListener('submit', function(e) {
                     submitBtn.textContent = 'Send Message';
                     loader.style.display = 'none';
                     document.getElementById("successMessage").style.display = "none";
-                }, 3000);
+                }, 300);
             } else {
                 alert("There was an error sending your message. Please try again.");
                 submitBtn.disabled = false;
