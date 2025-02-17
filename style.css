@@ -110,30 +110,43 @@ body.dark-mode .nav-links {
   margin-top: 0;
   background: linear-gradient(135deg, #3b82f6, #10b981);
   position: relative;
+  overflow: hidden;
 }
-.hero .hero-content {
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.hero-content {
   max-width: 800px;
   padding-top: 4rem;
+  position: relative;
+  z-index: 2;
 }
-.hero .hero-content h1 {
+.hero-content h1 {
   font-size: 3.5rem;
   margin-bottom: 1rem;
   line-height: 1.2;
   animation: fadeInUp 0.8s ease;
 }
-.hero .hero-content p {
+.hero-content p {
   font-size: 1.25rem;
   margin-bottom: 2rem;
   opacity: 0.9;
   animation: fadeInUp 1s ease;
 }
-.hero .hero-content .social-links {
+.hero-content .social-links {
   display: flex;
   gap: 1rem;
   justify-content: center;
   margin-top: 2rem;
 }
-.hero .hero-content .social-links a {
+.hero-content .social-links a {
   color: #1f2937;
   text-decoration: none;
   padding: 0.75rem 1.5rem;
@@ -143,7 +156,7 @@ body.dark-mode .nav-links {
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
 }
-.hero .hero-content .social-links a:hover {
+.hero-content .social-links a:hover {
   background: #1f2937;
   color: #ffffff;
   transform: translateY(-2px);

@@ -1,6 +1,5 @@
 const themeToggle = document.getElementById('theme-toggle');
 
-// Set initial state based on localStorage
 themeToggle.checked = localStorage.getItem('theme') !== 'dark-mode';
 
 themeToggle.addEventListener('change', () => {
@@ -13,13 +12,11 @@ themeToggle.addEventListener('change', () => {
   }
 });
 
-// Set initial theme on page load
 if (localStorage.getItem('theme') === 'dark-mode') {
   document.body.classList.add('dark-mode');
   themeToggle.checked = false;
 }
   
-  // Rest of your JavaScript remains the same
 
 const contactForm = document.querySelector('.contact-form');
 const formInputs = contactForm.querySelectorAll('input, textarea');
@@ -73,7 +70,7 @@ contactForm.addEventListener('submit', function(e) {
                     submitBtn.textContent = 'Send Message';
                     loader.style.display = 'none';
                     document.getElementById("successMessage").style.display = "none";
-                }, 300);
+                }, 3000);
             } else {
                 alert("There was an error sending your message. Please try again.");
                 submitBtn.disabled = false;
